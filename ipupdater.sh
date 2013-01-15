@@ -4,7 +4,8 @@
 ipfile=~/Dropbox/HomeNetworkIP.txt
 
 #get external IP
-IP=$(curl -s http://automation.whatismyip.com/n09230945.asp)
+URL='http://checkip.dyndns.org'
+IP=$(curl -s $URL)
 
 #get old IP
 #OLDIP=""
@@ -12,6 +13,7 @@ IP=$(curl -s http://automation.whatismyip.com/n09230945.asp)
 #then OLDIP=$(<$ipfile) fi #save new IP to the file echo $IP > $ipfile
 
   #save new IP to the file
+  #echo $IP
   echo $IP > $ipfile
 #fi
 
